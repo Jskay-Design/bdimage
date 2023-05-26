@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donar PhotoGraphy System</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container-fluid"> 
+			<div class="row donarForm"> 
+			  <!--#################Blood Donar Data input section -->
+				<div class="col-md-5 ">
+				<h2 class="text-center" > নিচের ফরমে রক্তদাতার তথ্য দিন</h2>
+
+<form  name="dataForm" action="#" onsubmit="return validatinForm()" >
+				<table class="table table-hover">
+  </thead>
+  <tbody>
+    <tr>
+      <td>রক্ত দাতার নামঃ</td>
+      <td><input type="text" id="fName" /></td>
+    </tr>
+    <tr>
+      <td>রক্তের গ্রুপঃ</td>
+      <td> 
+        <select id="bgroup" >                          
+          <option>A+(Positive)</option>
+          <option>A-(Negetive)</option>
+          <option>B+(Positive)</option>
+          <option>B-(Negetive)</option>
+          <option>O+(Positive)</option>
+          <option>O-(Negetive)</option>
+          <option>AB+(Positive)</option>
+          <option>AB-(Negetive)</option>
+            </select> 
+	  </td>
+    </tr>
+    <tr>
+      <td>রক্ত দানের তারিখ:</td>
+      <td> <input type="" id="bdonateDate"  /> </td>
+    </tr>
+	<tr>
+      <td>রক্ত দানের অবস্থাঃ</td>
+      <td> <input type="text" id="lastDate" /> </td>
+    </tr>
+	<tr>
+      <td>রক্ত দাতার ছবিঃ</td>
+      <td> <input id="DonarPhoto" type="file" accept="imnage/*" onchange="preview_image(event)" /> </td>
+    </tr>
+	<tr>
+      <td></td>
+      <td>  </td>
+    </tr>
+  </tbody>
+</table>
+<button onclick="dSubmit()" type="button" class="btn btn-success">পরবর্তী  ধাপে যান</button>
+</form>
+				</div>
+				<!--Blood Donar Date  input Form section End -->       
+				
+				<!-- Blood Donar Date Display/Show section is Start -->				
+<div class="col-md-7 ">
+  <h2 class="text-center" > নিম্নে রক্তদাতার তথ্য গুলো  </h2>
+  <div id="htmltoimage"> 
+    <div class="abbmodal text-center"> 
+      <img src="img/name.png"  height="100%" width="100%"alt="">
+    </div>
+  <div class=" donar-img text-center">
+  <img class="rounded mt-1 mb-1" id="output_image" height="250" width="300">
+    </div>
+
+    <!-- this javascript code for upload image insert -->
+<script type="text/javascript">
+      function preview_image(event) {
+        var reader = new FileReader();
+        reader.onload = function(){
+          var output = document.getElementById('output_image');
+          output.src = reader.result;
+        }
+        reader.readAsDataURL(event.target.files[0]);
+      }
+    </script>
+
+
+<div>			  
+<table class="table mb-1" >
+<tbody style="background:#929eb1;">
+
+<tr  class="data-details"> 
+  <th>নামঃ </th>
+<th colspan="2" id="DonarName" class="display-data" >  </th>  
+</tr>
+<tr  class="data-details"> 
+<th>রক্তের গ্রুপঃ  </th>
+<th>রক্ত দানের অবস্থাঃ </th>
+<th>রক্ত দানের তারিখঃ </th>
+
+</tr>
+<tr  class="display-data">
+<td id="bloodGroup">  </td>
+<td id="donateTime"> </td>
+<td id="donateDate">  </td>
+</tr>
+
+</tbody>
+</table> 
+<div class="abbmodal text-center">
+      <img src="img/footer.png" height="90%" width="100%" alt="">
+    </div>
+      </div>
+  </div>				
+	<button type="button" class="btn btn-success" onclick="downloadimage()"> ছবি আকারে সংগ্রহ করুন </button>
+				</div>        
+  		</div>	
+	</div>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/html2canvas.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

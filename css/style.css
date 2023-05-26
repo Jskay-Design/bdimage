@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+h1{
+    text-align: center;
+}
+     /* This section Is only For Update System */
+.donarForm{
+background: #E55D87;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #5FC3E4, #E55D87);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #5FC3E4, #E55D87); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+                        /* this code is for modal section */ 
+.close{
+    align-items: flex-end;
+}
+.abbmodal{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 15px 25px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.donar-img{ 
+   background-image: url("../img/bg.png"); 
+   background-repeat: no-repeat;
+   background-position: relative;
+   background-size: cover; 
+}
+.donar-img img{ 
+    border: 1px solid rgb(240, 48, 48);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 15px 25px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.data-details{
+    height:30px;
+    font-size: 1.2em;
+}
+.display-data{
+    font-size: 1.5em;
+    font-weight: 500;
+    color: red;
+}
